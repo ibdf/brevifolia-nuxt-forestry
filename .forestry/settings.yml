@@ -5,9 +5,12 @@ admin_path:
 webhook_url: 
 sections:
 - type: heading
-  label: Content
-- type: heading
   label: Pages
+- type: document
+  path: content/data/info.json
+  label: Info Page
+- type: heading
+  label: Content
 - type: directory
   path: content/blog-posts
   label: Blog Posts
@@ -18,9 +21,6 @@ sections:
 - type: document
   path: content/data/authors.json
   label: Author List
-- type: document
-  path: content/data/info.json
-  label: Info Page
 - type: heading
   label: Config
 - type: document
