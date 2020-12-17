@@ -11,6 +11,7 @@ sections:
   match: "**/*"
   new_doc_ext: md
   templates:
+  - basic-page
   - info-page
 - type: heading
   label: Pages
