@@ -8,7 +8,7 @@ sections:
   path: content/pages
   label: Pages Dir
   create: all
-  match: "**/*.md"
+  match: "**/*"
   new_doc_ext: md
   templates:
   - info-page
