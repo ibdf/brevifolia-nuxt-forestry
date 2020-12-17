@@ -47,3 +47,4 @@ fields:
   default: "#EBEBEB"
 pages:
 - content/data/info.json
+- content/pages/candidate/test.md
