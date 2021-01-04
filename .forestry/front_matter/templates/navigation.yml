@@ -41,6 +41,6 @@ fields:
     min: 
     max: 
     labelField: title
-  label: Main Navigation
+  label: Main Navigation Items
 pages:
 - content/options/navigation.json
