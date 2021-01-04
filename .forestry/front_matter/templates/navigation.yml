@@ -2,15 +2,25 @@
 label: Navigation
 hide_body: true
 fields:
-- name: name
-  type: text
+- name: select_pages
+  type: field_group_list
+  fields:
+  - name: page
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: pages-dir
+        file: 
+        path: 
+    label: Page
   config:
-    required: false
-  label: name
-- name: url
-  type: text
-  config:
-    required: true
-  label: url
+    min: 
+    max: 
+    labelField: 
+  label: Select Pages
 pages:
 - _data/navigation.json
