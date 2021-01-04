@@ -1,6 +1,6 @@
 ---
-label: Basic Page
-hide_body: true
+label: Default Page
+hide_body: false
 display_field: title
 fields:
 - name: title
