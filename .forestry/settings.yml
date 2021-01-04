@@ -12,9 +12,12 @@ sections:
   new_doc_ext: md
   templates:
   - basic-page
-- type: document
-  path: test
-  label: Test
+- type: directory
+  path: _data
+  label: Data
+  create: documents
+  match: "*"
+  new_doc_ext: ".json"
 - type: document
   path: _data/navigation.json
   label: Navigation
