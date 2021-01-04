@@ -32,3 +32,5 @@ fields:
   showOnly:
     field: external_link
     value: true
+pages:
+- content/options/navigation.json

@@ -2,5 +2,11 @@
   "pages": [
     "Test",
     "Test2"
-  ]
+  ],
+  "select_page": [
+
+  ],
+  "external_link": false,
+  "link_label": "",
+  "url": ""
 }
