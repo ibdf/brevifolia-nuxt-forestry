@@ -13,10 +13,10 @@ sections:
   templates:
   - basic-page
 - type: heading
-  label: Options
+  label: Navigation
 - type: directory
   path: _data/navigation/main
-  label: Data
+  label: Main
   create: documents
   match: "*"
   new_doc_ext: json
