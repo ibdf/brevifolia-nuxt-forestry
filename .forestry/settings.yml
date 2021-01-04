@@ -13,7 +13,7 @@ sections:
   templates:
   - basic-page
 - type: document
-  path: test.md
+  path: test
   label: Test
 - type: document
   path: _data/navigation.json
