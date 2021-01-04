@@ -2,23 +2,33 @@
 label: Navigation
 hide_body: true
 fields:
-- name: select_pages
-  type: field_group_list
-  fields:
-  - name: page
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: pages
-        section: pages-dir
-        file: 
-        path: 
-    label: Page
+- name: link_label
+  type: text
   config:
-    min: 
-    max: 
-    labelField: 
-  label: Select Pages
+    required: false
+  label: Link label
+- name: external_link
+  type: boolean
+  label: External Link
+- name: select_page
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: pages-dir
+      file: 
+      path: 
+  label: Select Page
+  showOnly:
+    field: external_link
+- name: url
+  type: text
+  config:
+    required: true
+  label: Url
+  showOnly:
+    field: external_link
+    value: true
