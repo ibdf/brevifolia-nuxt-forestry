@@ -7,9 +7,6 @@ fields:
   config:
     required: false
   label: Link label
-- name: external_link
-  type: boolean
-  label: External Link
 - name: select_page
   type: select
   default: []
@@ -24,6 +21,9 @@ fields:
   label: Select Page
   showOnly:
     field: external_link
+- name: external_link
+  type: boolean
+  label: External Link?
 - name: url
   type: text
   config:
