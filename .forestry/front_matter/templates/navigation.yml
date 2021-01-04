@@ -22,5 +22,3 @@ fields:
     max: 
     labelField: 
   label: Select Pages
-pages:
-- _data/navigation.json
