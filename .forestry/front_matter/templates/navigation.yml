@@ -5,11 +5,16 @@ fields:
 - name: navigation_items
   type: field_group_list
   fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
   - name: is_external_link
     type: boolean
     label: Is external link
     description: Check when linking to another website
-  - name: page
+  - name: page_url
     type: select
     default: []
     config:
@@ -23,13 +28,6 @@ fields:
     label: Select Page
     showOnly:
       field: is_external_link
-  - name: title
-    type: text
-    config:
-      required: false
-    label: Title
-    description: Specify a title when the selected page title is too long or an external
-      link is used.
   - name: external_url
     type: text
     config:
