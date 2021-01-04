@@ -36,6 +36,7 @@ fields:
     showOnly:
       field: is_external_link
       value: true
+    default: https://
   config:
     min: 
     max: 
