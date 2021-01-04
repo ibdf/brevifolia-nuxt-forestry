@@ -12,3 +12,5 @@ fields:
   config:
     required: true
   label: url
+pages:
+- _data/navigation.json
