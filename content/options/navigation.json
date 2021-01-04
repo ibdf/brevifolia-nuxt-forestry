@@ -10,6 +10,12 @@
   "navigation_title": "Contact Us",
   "navigation_items": [
     {
+      "title": "Home",
+      "is_external_link": false,
+      "page_url": "content/pages/home.md",
+      "external_url": "https://"
+    },
+    {
       "is_external_link": false,
       "page_url": "content/pages/contact-us.md",
       "external_url": "https://",
