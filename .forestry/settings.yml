@@ -10,8 +10,6 @@ sections:
   create: documents
   match: "*"
   new_doc_ext: json
-  templates:
-  - navigation
 - type: directory
   path: content/pages
   label: Pages
