@@ -14,14 +14,6 @@ sections:
   - basic-page
 - type: heading
   label: Navigation
-- type: directory
-  path: _data/navigation/main
-  label: Main
-  create: documents
-  match: "*"
-  new_doc_ext: json
-  templates:
-  - navigation
 upload_dir: static
 public_path: ''
 front_matter_path: ''

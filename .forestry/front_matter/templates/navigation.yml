@@ -32,5 +32,3 @@ fields:
   showOnly:
     field: external_link
     value: true
-pages:
-- _data/navigation/main/nav-contact-us.json
