@@ -2,37 +2,46 @@
 label: Navigation
 hide_body: true
 fields:
-- name: navigation_title
-  type: text
+- name: add_new_navigation_item
+  type: field_group_list
+  fields:
+  - name: is_external_link
+    type: boolean
+    label: Is external link
+    description: Check when linking to another website
+  - name: page
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: pages-dir
+        file: 
+        path: 
+    label: Select Page
+    showOnly:
+      field: is_external_link
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Specify a title when the selected page title is too long or an external
+      link is used.
+  - name: external_url
+    type: text
+    config:
+      required: false
+    label: External Url
+    showOnly:
+      field: is_external_link
+      value: true
   config:
-    required: false
-  label: Navigation Title
-  description: Use this field when using an external field or when you need to use
-    an alternative title other than the page title (eg. page title is too long)
-- name: select_page
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: pages-dir
-      file: 
-      path: 
-  label: Select Page
-  showOnly:
-    field: external_link
-- name: external_link
-  type: boolean
-  label: External Link?
-- name: url
-  type: text
-  config:
-    required: true
-  label: Url
-  showOnly:
-    field: external_link
-    value: true
+    min: 
+    max: 
+    labelField: 
+  label: Add new navigation item
 pages:
 - content/options/navigation.json
