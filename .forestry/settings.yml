@@ -12,15 +12,6 @@ sections:
   new_doc_ext: md
   templates:
   - basic-page
-- type: directory
-  path: _data
-  label: Data
-  create: documents
-  match: "*"
-  new_doc_ext: json
-- type: document
-  path: _data/navigation.json
-  label: Navigation
 upload_dir: static
 public_path: ''
 front_matter_path: ''
