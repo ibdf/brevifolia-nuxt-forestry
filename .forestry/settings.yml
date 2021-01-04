@@ -14,10 +14,6 @@ sections:
   - basic-page
 - type: heading
   label: Options
-- type: document
-  path: navigation
-  label: Navigation
-  match: "**/*"
 upload_dir: static
 public_path: ''
 front_matter_path: ''
