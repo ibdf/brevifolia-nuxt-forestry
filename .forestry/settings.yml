@@ -12,11 +12,15 @@ sections:
   new_doc_ext: md
   templates:
   - basic-page
-- type: heading
-  label: Options
+- type: document
+  path: test.md
+  label: Test
+  match: "**/*"
 - type: document
   path: _data/navigation.json
   label: Navigation
+- type: heading
+  label: Options
 upload_dir: static
 public_path: ''
 front_matter_path: ''
