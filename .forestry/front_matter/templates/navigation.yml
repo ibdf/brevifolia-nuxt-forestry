@@ -41,7 +41,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: page
   label: Main Navigation
 pages:
 - content/options/navigation.json
