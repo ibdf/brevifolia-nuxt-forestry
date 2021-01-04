@@ -31,7 +31,7 @@ fields:
   - name: external_url
     type: text
     config:
-      required: true
+      required: false
     label: External Url
     showOnly:
       field: is_external_link
