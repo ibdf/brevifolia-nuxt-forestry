@@ -9,6 +9,11 @@
   "url": "",
   "navigation_title": "Contact Us",
   "navigation_items": [
-
+    {
+      "is_external_link": false,
+      "page_url": "content/pages/contact-us.md",
+      "external_url": "https://",
+      "title": "Contact Us"
+    }
   ]
 }
