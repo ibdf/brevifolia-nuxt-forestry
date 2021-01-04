@@ -8,8 +8,8 @@ fields:
   config:
     required: false
   label: Title
-- name: hero
-  type: include
+- name: banner
+  type: image_gallery
   config: {}
-  template: hero-image
-  label: Hero
+  label: Banner
+  description: Banner image that shows up under the title.
