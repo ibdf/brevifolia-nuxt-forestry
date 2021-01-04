@@ -2,11 +2,13 @@
 label: Navigation
 hide_body: true
 fields:
-- name: link_label
+- name: navigation_title
   type: text
   config:
     required: false
-  label: Link label
+  label: Navigation Title
+  description: Use this field when using an external field or when you need to use
+    an alternative title other than the page title (eg. page title is too long)
 - name: select_page
   type: select
   default: []
