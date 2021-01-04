@@ -2,7 +2,7 @@
 label: Navigation
 hide_body: true
 fields:
-- name: add_new_navigation_item
+- name: navigation_items
   type: field_group_list
   fields:
   - name: is_external_link
@@ -42,6 +42,6 @@ fields:
     min: 
     max: 
     labelField: 
-  label: Add new navigation item
+  label: Main Navigation
 pages:
 - content/options/navigation.json
