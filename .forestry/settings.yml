@@ -14,6 +14,10 @@ sections:
   - basic-page
 - type: heading
   label: Navigation
+- type: document
+  path: content/options/navigation.json
+  label: Main
+  match: "**/*"
 upload_dir: static
 public_path: ''
 front_matter_path: ''
