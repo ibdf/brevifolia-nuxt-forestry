@@ -7,5 +7,13 @@
   "external_link": false,
   "link_label": "",
   "url": "",
-  "navigation_title": "Contact Us"
+  "navigation_title": "Contact Us",
+  "navigation_items": [
+    {
+      "is_external_link": false,
+      "page": "content/pages/contact-us.md",
+      "title": "",
+      "external_url": ""
+    }
+  ]
 }
