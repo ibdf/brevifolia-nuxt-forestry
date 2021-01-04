@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: options/navigation.json
-  label: Navigation
 - type: directory
   path: content/pages
   label: Pages
@@ -17,6 +14,9 @@ sections:
   - basic-page
 - type: heading
   label: Options
+- type: document
+  path: _data/navigation.json
+  label: Navigation
 upload_dir: static
 public_path: ''
 front_matter_path: ''
