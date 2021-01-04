@@ -4,11 +4,12 @@ const glob = require('glob');
 const config = require("./content/data/config.json")
 /* eslin-enable */
 const dynamicRoutes = getDynamicPaths({
-  '/blog': 'content/blog-posts/*.md',
+  '/blog': 'content/pages/*.md',
  });
 
 export default {
-  mode: 'universal',
+  ssr: false,
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -38,16 +39,18 @@ export default {
    */
   plugins: [],
   /*
-   ** Nuxt.js dev-modules
+   ** Nuxt.js build-modules
    */
-  devModules: [
+  buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    '@nuxt/content'
+  ],
   /*
    ** Build configuration
    */
@@ -55,14 +58,21 @@ export default {
     /*
      ** Using frontmatter-markdown-loader here to parse md files
      */
-    extend(config, ctx) {  
-      config.module.rules.push(
-      {
-          test: /\.md$/,
-          loader: "frontmatter-markdown-loader",
-          include: path.resolve(__dirname, "content/blog-posts")
+    extend(config, { isDev, isClient }) {
+      // if (isDev && isClient) {
+      //   config.module.rules.push({
+      //     enforce: 'pre',
+      //     test: /\.(js|vue)$/,
+      //     loader: 'eslint-loader',
+      //     exclude: /(node_modules)/
+      //   })
+      // }
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: "frontmatter-markdown-loader",
+        include: path.resolve(__dirname, "content/pages")
       })
-    }    
+    }
   },
   generate: {
     routes: dynamicRoutes
