@@ -8,3 +8,8 @@ fields:
   config:
     required: false
   label: Title
+- name: hero
+  type: include
+  config: {}
+  template: hero-image
+  label: Hero
