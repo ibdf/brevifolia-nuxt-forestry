@@ -1,4 +1,9 @@
 ---
 label: Hero Image
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: image_gallery
+  config: {}
+  label: Image
+  description: Add an hero image to this page. Shows up under the title.
