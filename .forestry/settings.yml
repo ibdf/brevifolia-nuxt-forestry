@@ -18,8 +18,8 @@ sections:
   path: content/options/navigation.json
   label: Main
 upload_dir: https://philadelphia-votes-test.s3.amazonaws.com
-public_path: ''
-front_matter_path: ''
+public_path: media
+front_matter_path: media
 use_front_matter_path: true
 file_template: ":filename:"
 build:
