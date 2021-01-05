@@ -1,5 +1,20 @@
 {
+  "pages": [
+    "Test",
+    "Test2"
+  ],
+  "select_page": "content/pages/contact-us.md",
+  "external_link": false,
+  "link_label": "",
+  "url": "",
+  "navigation_title": "Contact Us",
   "navigation_items": [
+    {
+      "title": "Voters",
+      "is_external_link": false,
+      "page_url": "content/pages/Voters/voters.md",
+      "external_url": "https://"
+    },
     {
       "title": "Home",
       "is_external_link": false,
