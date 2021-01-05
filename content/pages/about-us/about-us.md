@@ -1,5 +1,5 @@
 ---
 title: About Us
-banner: media/sectionImages-about.png
+banner: https://philadelphia-votes-test.s3.amazonaws.com/media/sectionImages-about.png
 
 ---
