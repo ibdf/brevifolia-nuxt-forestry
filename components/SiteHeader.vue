@@ -12,7 +12,7 @@
           >
             <template v-if="item.isExternal">
               <a
-                href="item.url"
+                :href="item.url"
                 target="_blank"
               >{{ item.title }}</a>
             </template>
@@ -42,10 +42,12 @@ export default {
       let url = '';
 
       if (item.page_url) {
-        url = item.page_url.replace('content/pages/', '').replace('.md', '.html');
+        url = item.page_url.replace('content/pages', '').replace('.md', '').toLowerCase();
       } else if (item.external_url) {
         url = item.external_url;
       }
+
+      console.log(url);
 
       this.mainNav.push({
         title: item.title,

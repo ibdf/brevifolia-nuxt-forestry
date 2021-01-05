@@ -1,18 +1,10 @@
 <template>
-  <div>
-    <pre>
+  <div class="content-body">
+    <h2>{{ page.title }}</h2>
+    <nuxt-content :document="page" />
+    <!-- <pre>
       {{ page }}
-    </pre>
-    <ul>
-      <li
-        v-for="item in items"
-        :key="item.name"
-      >
-        <pre>
-          {{ item }}
-        </pre>
-      </li>
-    </ul>
+    </pre> -->
   </div>
 </template>
 
@@ -28,9 +20,9 @@ export default {
 
     // console.log('params.pathMatch', params);
 
-    const files = await $content('pages', { deep: true }).only([ 'path' ]).fetch();
+    // const files = await $content('pages', { deep: true }).only([ 'path' ]).fetch();
 
-    console.log(files.map(file => file.path === '/index' ? '/' : file.path.replace('/pages', '')));
+    // console.log(files.map(file => file.path === '/index' ? '/' : file.path.replace('/pages/', '')));
 
     let path = params.pathMatch || 'home';
 
@@ -47,9 +39,15 @@ export default {
   },
   created () {
     this.$router.options.routes.forEach(route => {
-      console.log(route);
+      // console.log(route);
       this.items.push(route);
     });
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  .content-body {
+    padding: 0 0.5rem;
+  }
+</style>
