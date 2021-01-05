@@ -13,5 +13,17 @@ fields:
   config: {}
   label: Banner
   description: Banner image that shows up under the title.
+- name: add_to_sidebar
+  type: boolean
+  label: Add to Sidebar
+- name: sidebar_title
+  type: text
+  config:
+    required: false
+  label: Sidebar Title
+  description: Alternative title other than the page title to use in the sidebar.
+  showOnly:
+    field: add_to_sidebar
+    value: true
 pages:
 - content/pages/Voters/voter-registration-status.md
