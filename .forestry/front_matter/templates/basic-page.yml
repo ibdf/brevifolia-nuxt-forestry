@@ -13,3 +13,5 @@ fields:
   config: {}
   label: Banner
   description: Banner image that shows up under the title.
+pages:
+- content/pages/Voters/voter-registration-status.md
