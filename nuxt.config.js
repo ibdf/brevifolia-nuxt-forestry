@@ -1,11 +1,43 @@
 import path from "path";
-/* eslint-disable */
-const glob = require('glob');
-const config = require("./content/data/config.json")
-/* eslin-enable */
-const dynamicRoutes = getDynamicPaths({
-  '/blog': 'content/pages/*.md',
- });
+
+const config = require("./content/data/config.json");
+const dirTree = require("directory-tree");
+const pages = dirTree('./content/pages/');
+var slugify = require('slugify');
+
+function getPath (page) {
+  let parts = page.path.split('/');
+  let cleanedParts = [];
+  parts.shift();
+  parts.shift();
+  parts.forEach(part => {
+
+    part = part.replace(/\.md$/, '');
+
+    let pathPart = slugify(part, {
+      lower: true,
+      strict: true,
+    });
+    cleanedParts.push(pathPart);
+  });
+
+  let cleanedPath = cleanedParts.join('/');
+
+  let paths = [ cleanedPath ];
+  if (page.children) {
+    page.children.forEach(child => {
+      paths.push(...getPath(child));
+    });
+  }
+  return paths;
+}
+
+let paths = [];
+pages.children.forEach(page => {
+  paths.push(...getPath(page));
+});
+console.log(paths);
+
 
 export default {
   ssr: false,
@@ -21,10 +53,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: config.description || ''
-      }
+        content: config.description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -33,7 +65,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/styles/reset.scss', '@/assets/styles/global.scss'],
+  css: [ '@/assets/styles/reset.scss', '@/assets/styles/global.scss' ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -43,13 +75,13 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
   ],
   /*
    ** Build configuration
@@ -58,40 +90,21 @@ export default {
     /*
      ** Using frontmatter-markdown-loader here to parse md files
      */
-    extend(config, { isDev, isClient }) {
-      // if (isDev && isClient) {
-      //   config.module.rules.push({
-      //     enforce: 'pre',
-      //     test: /\.(js|vue)$/,
-      //     loader: 'eslint-loader',
-      //     exclude: /(node_modules)/
-      //   })
-      // }
+    extend(config) {
       config.module.rules.push({
         test: /\.md$/,
         loader: "frontmatter-markdown-loader",
-        include: path.resolve(__dirname, "content/pages")
-      })
-    }
+        include: path.resolve(__dirname, "content/pages"),
+      });
+    },
   },
   generate: {
-    routes: dynamicRoutes
-  }
-}
-/**
- * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
- */
+    crawler: false,
+    async routes () {
+      const { $content } = require('@nuxt/content');
+      const files = await $content('pages', { deep: true }).only([ 'path' ]).fetch();
 
-/* referenced https://github.com/jake-101/bael-template */
-function getDynamicPaths(urlFilepathTable) {
-  return [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      const filepathGlob = urlFilepathTable[url];
-      const routes = glob
-        .sync(filepathGlob)
-        .map(filepath => `${url}/${path.basename(filepath, '.md')}`);
-      return routes
-    })
-  );
-}
+      return files.map(file => file.path === '/index' ? '/' : file.path.replace('/pages', ''));
+    },
+  },
+};

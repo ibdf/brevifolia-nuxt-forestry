@@ -1,13 +1,4 @@
 {
-  "pages": [
-    "Test",
-    "Test2"
-  ],
-  "select_page": "content/pages/contact-us.md",
-  "external_link": false,
-  "link_label": "",
-  "url": "",
-  "navigation_title": "Contact Us",
   "navigation_items": [
     {
       "title": "Home",
