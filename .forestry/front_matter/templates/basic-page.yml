@@ -38,6 +38,18 @@ fields:
   showOnly:
     field: add_to_sidebar
     value: true
+- name: redirect_page
+  type: boolean
+  label: Redirect Page
+- name: redirect_to
+  type: text
+  config:
+    required: false
+  label: Redirect to
+  showOnly:
+    field: redirect_page
+    value: true
+  default: https://
 pages:
 - content/pages/Voters/new-voting-system.md
 - content/pages/Voters/polling-place-list-for-the-2020-general-election.md
