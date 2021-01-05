@@ -39,4 +39,5 @@ fields:
     field: add_to_sidebar
     value: true
 pages:
+- content/pages/Voters/new-voting-system.md
 - content/pages/Voters/voter-registration-status.md
