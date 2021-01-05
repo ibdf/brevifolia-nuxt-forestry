@@ -40,6 +40,7 @@ fields:
     value: true
 pages:
 - content/pages/Voters/new-voting-system.md
+- content/pages/Voters/view-a-sample-ballot.md
 - content/pages/Voters/voter-registration-status.md
 - content/pages/Voters/voting-reforms-act-77.md
 - content/pages/Voters/where-is-my-polling-place.md
