@@ -25,5 +25,18 @@ fields:
   showOnly:
     field: add_to_sidebar
     value: true
+- name: sidebar_position
+  type: number
+  label: Sidebar Position
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: add_to_sidebar
+    value: true
 pages:
 - content/pages/Voters/voter-registration-status.md
