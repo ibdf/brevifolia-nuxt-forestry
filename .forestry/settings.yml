@@ -17,7 +17,7 @@ sections:
 - type: document
   path: content/options/navigation.json
   label: Main
-upload_dir: https://philadelphia-votes-test.s3.amazonaws.com/media
+upload_dir: https://philadelphia-votes-test.s3.amazonaws.com
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: true
