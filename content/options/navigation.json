@@ -10,15 +10,15 @@
   "navigation_title": "Contact Us",
   "navigation_items": [
     {
-      "title": "Home",
+      "title": "About Us 2",
       "is_external_link": false,
-      "page_url": "content/pages/home.md",
+      "page_url": "content/pages/about-us/about-us.md",
       "external_url": "https://"
     },
     {
-      "title": "About Us",
+      "title": "Home",
       "is_external_link": false,
-      "page_url": "content/pages/About Us/about-us.md",
+      "page_url": "content/pages/home.md",
       "external_url": "https://"
     },
     {
