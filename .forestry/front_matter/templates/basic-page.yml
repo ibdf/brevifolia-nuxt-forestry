@@ -9,10 +9,10 @@ fields:
     required: false
   label: Title
 - name: banner
-  type: image_gallery
-  config: {}
+  type: file
+  config:
+    maxSize: 64
   label: Banner
-  description: Banner image that shows up under the title.
 - name: add_to_sidebar
   type: boolean
   label: Add to Sidebar
