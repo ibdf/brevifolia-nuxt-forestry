@@ -1,5 +1,7 @@
 ---
 title: Voter ID
+add_to_sidebar: true
+sidebar_position: 4
 
 ---
 ID is not required to vote, unless it is your first time voting in your current division.
