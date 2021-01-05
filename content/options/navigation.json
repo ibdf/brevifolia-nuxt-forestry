@@ -10,6 +10,12 @@
   "navigation_title": "Contact Us",
   "navigation_items": [
     {
+      "title": "Resource & Data",
+      "is_external_link": false,
+      "page_url": "content/pages/Resources and Data/resources-and-data.md",
+      "external_url": "https://"
+    },
+    {
       "title": "Election Board Officials",
       "is_external_link": false,
       "page_url": "content/pages/Election Board Officials/election-board-officials.md",
