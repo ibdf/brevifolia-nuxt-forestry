@@ -15,7 +15,7 @@ sections:
   - home
 - type: directory
   path: news
-  label: News & Updates
+  label: News
   create: documents
   match: "**/*"
   new_doc_ext: md
