@@ -1,51 +1,24 @@
 <template>
   <div class="content-body">
-    <div
-      id="slider"
-      ref="slider"
-    >
-      <div
-        v-for="slide in slides"
-        :key="slide.title"
-        class="slide"
-      >
-        <img :src="slide.image">
-        <h3>{{ slide.title }}</h3>
-        <div class="slide-desc">
-          {{ slide.desc }}
-          <template v-if="slide.isExternal">
-            <a
-              :href="slide.url"
-              target="_blank"
-              class="read-more"
-            >Read More</a>
-          </template>
-          <template v-else>
-            <nuxt-link
-              :to="slide.url"
-              class="read-more"
-            >
-              Read More
-            </nuxt-link>
-          </template>
-        </div>
-      </div>
-    </div>
-    <img
-      v-if="page.banner"
-      :src="page.banner"
-    >
-    <nuxt-content :document="page" />
-    <pre>
+    <slider page="home" />
+    <latest-news :limit="3">
+      <pre>
       {{ page }}
     </pre>
+    </latest-news>
   </div>
 </template>
 
 <script>
 
+import Slider from '~/components/Slider.vue';
+import LatestNews from '~/components/LatestNews.vue';
+
 export default {
-  components: {},
+  components: {
+    Slider,
+    LatestNews,
+  },
   layout: 'layout',
   async asyncData ({ $content }) {
 
@@ -88,74 +61,11 @@ export default {
       this.items.push(route);
     });
   },
-  mounted () {
-    let slider = this.$refs['slider'];
-    let slides = slider.querySelectorAll('.slide');
-
-    function switchSlide (index) {
-      slides.forEach((slide, sIndex) => {
-        if (index === sIndex) {
-          console.log('equal');
-          slide.style.opacity = 1;
-        } else {
-          slide.style.opacity = 0;
-        }
-      });
-    }
-
-    var index = 1;
-    setInterval(function() {
-      console.log('here');
-      switchSlide(index);
-      index++;
-      if (index > 2) {
-        index = 0;
-      }
-    }, 5000);
-  },
 };
 </script>
 
 <style lang="scss" scoped>
   .content-body {
     padding: 0 0.5rem;
-  }
-  #slider {
-    position: relative;
-    height: 348px;
-    overflow: hidden;
-   .slide {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     opacity: 0;
-     transition: opacity 0.25s ease-in-out;
-     &:nth-child(1) {
-       opacity: 1;
-     }
-     img {
-       margin-bottom: 0.5rem;
-       width: 100%;
-       height: auto;
-     }
-     .slide-desc {
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       width: 100%;
-       z-index: 10;
-       background-color: rgba(#444, 0.8);
-       padding: 1rem;
-       color: #fff;
-     }
-     .read-more {
-       background-color: #6b9cbd;
-       color: #fff;
-       padding: 0.5rem;
-       display: inline-block;
-     }
-   }
   }
 </style>
