@@ -1,4 +1,60 @@
 ---
 label: Home
 hide_body: true
-fields: []
+fields:
+- name: slider
+  type: image_gallery
+  config: {}
+  label: Slider
+- name: slides
+  type: field_group_list
+  fields:
+  - name: slide_image
+    type: file
+    config:
+      maxSize: 64
+    label: Slide Image
+  - name: slide_titlte
+    type: text
+    config:
+      required: false
+    label: Slide Titlte
+  - name: slide_desc
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Slide Description
+  - name: external_link
+    type: boolean
+    label: External Link
+  - name: page_url
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: pages-dir
+        file: 
+        path: 
+    label: page_url
+    showOnly:
+      field: external_link
+  - name: external_url
+    type: text
+    config:
+      required: false
+    label: external_url
+    showOnly:
+      field: external_link
+      value: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Slides
