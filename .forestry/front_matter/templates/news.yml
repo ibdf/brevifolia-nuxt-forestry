@@ -18,4 +18,5 @@ fields:
   default: now
   label: Posted on
 pages:
+- news/reconvening-of-the-return-board-for-the-signing-of-the-certification.md
 - news/return-board-and-weekly-meeting-update.md
