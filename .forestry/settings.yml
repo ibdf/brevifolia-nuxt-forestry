@@ -13,6 +13,14 @@ sections:
   templates:
   - basic-page
   - home
+- type: directory
+  path: news
+  label: News & Updates
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".md"
+  templates:
+  - basic-page
 - type: heading
   label: Navigation
 - type: document
