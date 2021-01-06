@@ -17,6 +17,15 @@ fields:
     display_utc: false
   default: now
   label: Posted on
+- name: summary
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Summary
 pages:
 - news/no-board-of-elections-meeting-on-wednesday.md
 - news/reconvening-of-the-return-board-for-the-2020-general-and-special-of-november-3-2020.md
