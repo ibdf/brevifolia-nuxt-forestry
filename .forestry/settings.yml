@@ -14,7 +14,7 @@ sections:
   - basic-page
   - home
 - type: directory
-  path: news
+  path: content/news
   label: News
   create: documents
   match: "**/*"
