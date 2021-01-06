@@ -14,5 +14,12 @@ slides:
   external_link: true
   page_url: []
   external_url: https://results.philadelphiavotes.com/
+- slide_image: https://philadelphia-votes-test.s3.amazonaws.com/media/vote-by-mailbox.png
+  slide_titlte: Vote by Mail
+  slide_desc: 'You can apply for an Absentee or no-excuse Mail-in ballot and vote
+    from home. '
+  external_link: true
+  page_url: []
+  external_url: https://new-voting-system.philadelphiavotes.com/
 
 ---
