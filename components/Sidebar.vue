@@ -29,34 +29,44 @@ export default {
     };
   },
   async fetch () {
+
     let parent = this.$route.path.split('/')[1];
 
     let children = await this.$content(`pages/${parent}`).fetch();
 
     let sidebarNav = [];
 
-    children.forEach(page => {
-      if (page.add_to_sidebar) {
-        let url = '';
-        if (page.redirect_page) {
-          url = page.redirect_to;
-        } else {
-          url = page.path.replace('/pages', '');
+    if (Array.isArray(children)) {
+      children.forEach(page => {
+        if (page.add_to_sidebar) {
+          let url = '';
+          if (page.redirect_page) {
+            url = page.redirect_to;
+          } else {
+            url = page.path.replace('/pages', '');
+          }
+          sidebarNav.push({
+            title: page.title,
+            isExternal: page.redirect_page,
+            url: url,
+            position: page.sidebar_position,
+          });
         }
-        sidebarNav.push({
-          title: page.title,
-          isExternal: page.redirect_page,
-          url: url,
-          position: page.sidebar_position,
-        });
-      }
-    });
+      });
 
-    sidebarNav.sort((a, b) => {
-      return a.position - b.position;
-    });
+      sidebarNav.sort((a, b) => {
+        return a.position - b.position;
+      });
 
-    this.sidebarNav = sidebarNav;
+      this.sidebarNav = sidebarNav;
+
+    } else {
+
+      this.sidebarNav = [];
+    }
+
+
+
 
     // sidebarNav.navigation_items.forEach(item => {
 
@@ -77,6 +87,11 @@ export default {
     //   });
 
     // });
+  },
+  watch: {
+    '$route.path'() {
+      this.$fetch();
+    },
   },
 };
 </script>

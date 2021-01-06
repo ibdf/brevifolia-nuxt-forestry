@@ -1,10 +1,11 @@
 <template>
   <div class="content-body">
     <h2>{{ page.title }}</h2>
+    <img
+      v-if="page.banner"
+      :src="page.banner"
+    >
     <nuxt-content :document="page" />
-    <!-- <pre>
-      {{ page }}
-    </pre> -->
   </div>
 </template>
 
@@ -24,9 +25,11 @@ export default {
 
     // console.log(files.map(file => file.path === '/index' ? '/' : file.path.replace('/pages/', '')));
 
-    let path = params.pathMatch || 'home';
+    let path = params.pathMatch;
 
     const page = await $content(`pages/${path}`).fetch();
+
+    console.log(page);
 
     return {
       page,

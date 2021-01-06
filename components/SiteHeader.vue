@@ -47,8 +47,6 @@ export default {
         url = item.external_url;
       }
 
-      console.log(url);
-
       this.mainNav.push({
         title: item.title,
         isExternal: item.is_external_link,
