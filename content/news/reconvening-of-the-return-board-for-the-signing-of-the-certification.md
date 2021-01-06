@@ -3,8 +3,7 @@ posted_on: 2020-11-21T15:06:44.000+00:00
 title: " Reconvening of the Return Board for the Signing of the Certification "
 summary: 'The PA Supreme Court has issued a ruling in In Re: Canvass of Absentee and
   Mail-In Ballots of November 3, 2020 General Election, the Return Board will meet
-  Monday 11-23-2020 at 7pm to sign the Certification of the 2020 General and Special
-  Elections.'
+  Monday 11-23-2020 at 7pm to sign the...'
 
 ---
 The PA Supreme Court has issued a ruling in In Re: Canvass of Absentee and Mail-In Ballots of November 3, 2020 General Election, the Return Board will meet Monday 11-23-2020 at 7pm to sign the Certification of the 2020 General and Special Elections.
