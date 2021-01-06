@@ -11,8 +11,8 @@ sections:
   match: "**/*"
   new_doc_ext: md
   templates:
-  - home
   - basic-page
+  - home
 - type: heading
   label: Navigation
 - type: document
