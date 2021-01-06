@@ -20,7 +20,7 @@ sections:
   match: "**/*"
   new_doc_ext: md
   templates:
-  - basic-page
+  - news
 - type: heading
   label: Navigation
 - type: document
