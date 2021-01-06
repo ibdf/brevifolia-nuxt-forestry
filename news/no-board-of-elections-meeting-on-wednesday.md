@@ -1,5 +1,5 @@
 ---
-posted_on: 2020-11-18T15:09:00Z
+posted_on: 2020-11-17T15:09:00Z
 title: " No Board of Elections Meeting on Wednesday"
 
 ---
