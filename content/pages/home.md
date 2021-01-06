@@ -2,12 +2,6 @@
 title: Home
 slider: []
 slides:
-- slide_image: ''
-  slide_titlte: sdssad
-  slide_desc: asdada
-  external_link: false
-  page_url: content/pages/about-us/biography-of-commissioner-omar-sabir.md
-  external_url: ''
 - slide_image: https://philadelphia-votes-test.s3.amazonaws.com/media/live-election-results.PNG
   slide_titlte: " Live Election Results"
   slide_desc: 'Live Election Results '
