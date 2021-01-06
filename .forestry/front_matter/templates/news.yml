@@ -17,3 +17,5 @@ fields:
     display_utc: false
   default: now
   label: Posted on
+pages:
+- news/return-board-and-weekly-meeting-update.md
