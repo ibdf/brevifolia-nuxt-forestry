@@ -25,4 +25,6 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
+    min: 20
+    max: 200
   label: Summary
