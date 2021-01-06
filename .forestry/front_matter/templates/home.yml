@@ -58,3 +58,5 @@ fields:
     max: 
     labelField: 
   label: Slides
+pages:
+- content/pages/home.md

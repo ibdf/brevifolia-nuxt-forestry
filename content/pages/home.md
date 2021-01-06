@@ -1,4 +1,6 @@
 ---
 title: Home
+slider: []
+slides: []
 
 ---
