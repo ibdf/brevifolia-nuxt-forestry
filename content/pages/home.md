@@ -32,5 +32,6 @@ countdown:
   title: Municipal Primary
   start_date: 2021-05-18T11:00:00Z
   description: Polls open 7am-8pm.
+  countdown_title: Municipal Primary
 
 ---
