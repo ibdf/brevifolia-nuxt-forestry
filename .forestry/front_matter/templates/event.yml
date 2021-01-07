@@ -35,20 +35,17 @@ fields:
       format: markdown
   label: Location
 - name: categories
-  type: select
-  default: []
+  type: list
   config:
-    required: false
-    options:
-    - Candidates
-    - Campaign Finance
-    - " Voters"
-    - Election Board
+    use_select: true
+    min: 
+    max: 
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+    options:
+    - Voters
+    - " Candidates"
+    - " Campaign Finance"
   label: Categories
 - name: venue
   type: field_group
