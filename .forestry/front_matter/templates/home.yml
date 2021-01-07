@@ -54,5 +54,29 @@ fields:
     max: 5
     labelField: 
   label: Slides
+- name: countdown
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: start_date
+    type: datetime
+    label: Start date
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+  label: Countdown
 pages:
 - content/pages/home.md
