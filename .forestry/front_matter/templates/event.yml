@@ -90,3 +90,5 @@ fields:
       required: false
     label: Zip
   label: Venue
+pages:
+- content/events/last-day-to-file-objections-to-nomination-petitions.md
