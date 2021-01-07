@@ -58,11 +58,11 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: title
+  - name: countdown_title
     type: text
     config:
       required: false
-    label: Title
+    label: Countdown Title
   - name: start_date
     type: datetime
     label: Start date
