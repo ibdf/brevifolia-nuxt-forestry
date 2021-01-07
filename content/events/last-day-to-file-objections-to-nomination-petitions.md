@@ -1,5 +1,8 @@
 ---
-categories: " Voters"
+categories:
+- " Campaign Finance"
+- " Candidates"
+- Voters
 venue:
   state: PA
   name: County Board of Elections
