@@ -28,5 +28,9 @@ slides:
   external_link: true
   page_url: []
   external_url: https://new-voting-system.philadelphiavotes.com/
+countdown:
+  title: Municipal Primary
+  start_date: 2021-05-18T11:00:00Z
+  description: Polls open 7am-8pm.
 
 ---
