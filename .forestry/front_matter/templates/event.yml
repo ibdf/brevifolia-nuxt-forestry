@@ -1,4 +1,92 @@
 ---
 label: Event
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: location
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Location
+- name: categories
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Candidates
+    - Campaign Finance
+    - " Voters"
+    - Election Board
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Categories
+- name: venue
+  type: field_group
+  config: {}
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: street
+    type: text
+    config:
+      required: false
+    label: Street
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - PA
+      - " NJ"
+      - " NY"
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: State
+  - name: zip
+    type: text
+    config:
+      required: false
+    label: Zip
+  label: Venue
